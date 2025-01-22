@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: MF Cookies
-Plugin URI: 
+Plugin URI: https://github.com/frostkom/mf_cookies
 Description:
-Version: 1.0.3
+Version: 1.0.4
 Licence: GPLv2 or later
 Author: Martin Fors
 Author URI: https://martinfors.se
@@ -11,7 +11,7 @@ Text Domain: lang_cookies
 Domain Path: /lang
 
 Depends: MF Base
-GitHub Plugin URI: 
+GitHub Plugin URI: frostkom/mf_cookies
 */
 
 if(!function_exists('is_plugin_active') || function_exists('is_plugin_active') && is_plugin_active("mf_base/index.php"))
