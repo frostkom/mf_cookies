@@ -399,8 +399,7 @@ class mf_cookies
 
 		if($setting_cookie_cookiebot != '')
 		{
-			$this->footer_output .= "<script id='Cookiebot' src='https://consent.cookiebot.com/uc.js' data-cbid='".$setting_cookie_cookiebot."' data-blockingmode='auto' type='text/javascript'></script>";
-			//<script id='CookieDeclaration' src='https://consent.cookiebot.com/".$setting_cookie_cookiebot."/cd.js' async></script>
+			$this->footer_output .= "<script data-blockingmode='auto' id='Cookiebot' src='https://consent.cookiebot.com/uc.js' data-cbid='".$setting_cookie_cookiebot."' type='text/javascript'></script>";
 		}
 	}
 
