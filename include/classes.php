@@ -79,7 +79,7 @@ class mf_cookies
 					$arr_sensitive_data_types['public']['cookie_accepted'] = array('label' => __("Remember if visitor accepts sensitive data on the site", 'lang_cookies'), 'used' => false, 'lifetime' => "1 year", 'personal_data' => false);
 				}
 
-				if(apply_filters('get_widget_search', 'theme-news-widget') > 0)
+				if((int)apply_filters('get_widget_search', 'theme-news-widget') > 0)
 				{
 					$wpdb->get_results($wpdb->prepare("SELECT option_id FROM ".$wpdb->options." WHERE option_name = %s AND option_value LIKE %s", 'widget_theme-news-widget', "\"news_hide_button\";s:3:\"yes\""));
 
@@ -89,7 +89,7 @@ class mf_cookies
 					}
 				}
 
-				if(apply_filters('get_widget_search', 'theme-info-widget') > 0)
+				if((int)apply_filters('get_widget_search', 'theme-info-widget') > 0)
 				{
 					$wpdb->get_results($wpdb->prepare("SELECT option_id FROM ".$wpdb->options." WHERE option_name = %s AND option_value NOT LIKE %s", 'widget_theme-info-widget', "\"info_time_limit\";s:3:\"0\""));
 
