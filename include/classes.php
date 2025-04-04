@@ -354,7 +354,7 @@ class mf_cookies
 			mf_enqueue_style('style_cookies', $plugin_include_url."style.css");
 			mf_enqueue_script('script_cookies', $plugin_include_url."script.js", array('plugin_url' => $plugin_include_url));
 
-			$button_classes = (wp_is_block_theme() ? "wp-block-button__link has-background wp-element-button" : "button color_button"); //button color_button_border
+			$button_classes = (wp_is_block_theme() ? "wp-block-button__link has-background wp-element-button" : "button color_button");
 
 			$result = $wpdb->get_results($wpdb->prepare("SELECT ID, post_title, post_excerpt, post_content FROM ".$wpdb->posts." WHERE ID = '%d' AND post_type = %s AND post_status = %s", $setting_cookie_info, 'page', 'publish'));
 
