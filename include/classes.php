@@ -3,6 +3,7 @@
 class mf_cookies
 {
 	var $footer_output = "";
+	var $arr_sensitive_data_types = array();
 
 	function __construct(){}
 
