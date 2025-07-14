@@ -2,8 +2,8 @@
 
 class mf_cookies
 {
-	var $footer_output = "";
-	var $arr_sensitive_data_types = array();
+	var $footer_output;
+	var $arr_sensitive_data_types = [];
 
 	function __construct(){}
 
@@ -13,7 +13,7 @@ class mf_cookies
 
 		add_settings_section($options_area, "", array($this, $options_area."_callback"), BASE_OPTIONS_PAGE);
 
-		$arr_settings = array();
+		$arr_settings = [];
 		$arr_settings['setting_cookie_exists'] = __("Sensitive Data on This Site", 'lang_cookies');
 		$arr_settings['setting_cookie_info'] = __("Information Page", 'lang_cookies');
 
@@ -52,8 +52,8 @@ class mf_cookies
 			if(!isset($this->arr_sensitive_data_types))
 			{
 				$arr_sensitive_data_types = array(
-					'login' => array(),
-					'public' => array(),
+					'login' => [],
+					'public' => [],
 				);
 
 				$arr_sensitive_data_types['login']['wordpress_sec_'] = array('label' => __("Account details", 'lang_cookies'), 'used' => false, 'lifetime' => "2 day");
@@ -111,7 +111,7 @@ class mf_cookies
 			}
 		}
 
-		function get_cookie_list($data = array())
+		function get_cookie_list($data = [])
 		{
 			$out = "";
 
@@ -255,7 +255,7 @@ class mf_cookies
 			$setting_key = get_setting_key(__FUNCTION__);
 			$option = get_option($setting_key);
 
-			$arr_data = array();
+			$arr_data = [];
 			get_post_children(array('add_choose_here' => true, 'where' => "(post_excerpt != '' || post_content != '')"), $arr_data);
 
 			$description = "";
@@ -366,7 +366,7 @@ class mf_cookies
 				$post_excerpt = apply_filters('the_content', $r->post_excerpt);
 				$post_content = apply_filters('the_content', $r->post_content);
 
-				$this->footer_output .= "<div id='accept_cookies'>
+				$this->footer_output = "<div id='accept_cookies'>
 					<div>";
 
 						$buttons = "<a href='#accept_cookie' class='".$button_classes."'><i class='fa fa-check green'></i> ".__("Accept", 'lang_cookies')."</a>";
@@ -406,7 +406,7 @@ class mf_cookies
 
 	function wp_footer()
 	{
-		if(isset($this->footer_output) && $this->footer_output != '')
+		if($this->footer_output != '')
 		{
 			echo $this->footer_output;
 		}
