@@ -7,9 +7,7 @@
 		border-top: .1px solid #ccc;
 		bottom: 0;
 		display: none;
-		/*font-size: 1.4em;*/
 		left: 0;
-		/*line-height: 1.5;*/
 		padding: 1.5em;
 		position: fixed;
 		right: 0;
@@ -54,7 +52,7 @@
 
 @media print
 {
-	/*#accept_cookies, */#accepted_cookies
+	#accepted_cookies
 	{
 		display: none;
 	}
