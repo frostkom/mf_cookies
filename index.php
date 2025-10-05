@@ -3,7 +3,7 @@
 Plugin Name: MF Cookies
 Plugin URI: https://github.com/frostkom/mf_cookies
 Description:
-Version: 1.0.10
+Version: 1.0.11
 Licence: GPLv2 or later
 Author: Martin Fors
 Author URI: https://martinfors.se
@@ -38,7 +38,7 @@ if(!function_exists('is_plugin_active') || function_exists('is_plugin_active') &
 	function uninstall_cookies()
 	{
 		mf_uninstall_plugin(array(
-			'options' => array('setting_cookie_exists', 'setting_cookie_info', 'setting_cookie_deactivate_until_allowed', 'setting_cookie_cookiebot'),
+			'options' => array('setting_cookie_exists', 'setting_cookie_fingerprint', 'setting_cookie_info', 'setting_cookie_deactivate_until_allowed', 'setting_cookie_cookiebot'),
 		));
 	}
 }

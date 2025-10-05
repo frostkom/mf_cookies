@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-10 04:58+0100\n"
+"POT-Creation-Date: 2025-10-05 11:25+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Martin Fors\n"
 "Language-Team: \n"
@@ -15,966 +15,1074 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-msgid "XML Sitemap for %s"
-msgstr "Sidkarta för %s"
-
-msgid "XML Sitemap for %s | %s"
-msgstr "Sidkarta för %s | %s"
-
-msgid "Title"
-msgstr "Rubrik"
-
-msgid "Last Modified"
-msgstr "Senast ändrad"
-
-msgid "Choose Here"
-msgstr "Välj här"
-
-msgid "Author"
-msgstr "Författare"
-
-msgid "Categories"
-msgstr "Kategorier"
-
-msgid "Discussion"
-msgstr "Diskussion"
-
-msgid "Comments"
-msgstr "Kommentarer"
-
-msgid "Page Attributes"
-msgstr "Sidattribut"
-
-msgid "Custom Fields"
-msgstr "Egna fält"
-
-msgid "Excerpt"
-msgstr "Utdrag"
-
-msgid "Featured Image"
-msgstr "Utvald bild"
-
-msgid "Revisions"
-msgstr "Versioner"
-
-msgid "Slug"
-msgstr "URL"
-
-msgid "Tags"
-msgstr "Taggar"
-
-msgid "Trackbacks"
-msgstr "Återkopplingar"
-
-msgid "Maintenance Mode Activated"
-msgstr "Underhållsläge aktiverat"
-
-msgid "No Public Pages"
-msgstr "Inga publika sidor"
-
-msgid "Requires Login"
-msgstr "Kräver inloggning"
-
-msgid "No Index"
-msgstr "Ingen indexering"
-
-msgid "Public"
-msgstr "Publik"
-
-msgid "Always redirect visitors to the login page"
-msgstr "Skicka alltid besökare till inloggningssidan"
-
-msgid "Require login for public site"
-msgstr "Kräv inloggning innan besök på webbsidan"
-
-msgid "Templates"
-msgstr "Mallar"
-
-msgid "Hidden Meta Boxes"
-msgstr "Dolda metaboxar"
-
-msgid "Send Email when Draft is Saved"
-msgstr "Skicka e-post när utkast sparas"
-
-msgid "Ignore Style on Restore"
-msgstr "Ignorera vid återställning"
-
-msgid "Enable XML-RPC"
-msgstr "Aktivera XML-RPC"
-
-msgid "Optimize"
-msgstr "Optimera"
-
-msgid "Enable Edit Mode"
-msgstr "Aktivera redigeringsläge"
-
-msgid "Display Author Pages"
-msgstr "Visa författarsidor"
-
-msgid "Title Format"
-msgstr "Rubrikformat"
-
-msgid "Display Post Meta"
-msgstr "Visa information om inlägg"
-
-msgid "Allow Comments"
-msgstr "Tillåt kommentarer"
-
-msgid "Display scroll-to-top-link"
-msgstr "Visa länk för att skrolla längst upp på sidan"
-
-msgid "Scroll-to-top Text"
-msgstr "Skrolla-till-toppen-text"
-
-msgid "Redirect Single Result in Search"
-msgstr "Skicka vidare om ett sökresultat finns"
-
-msgid "404 Page"
-msgstr "404-sida"
-
-msgid "Maintenance Page"
-msgstr "Underhållssida"
-
-msgid "Activate Maintenance Mode"
-msgstr "Aktivera underhållssida"
-
-msgid "Sensitive Data on This Site"
-msgstr "Personlig information på denna webbplats"
-
-msgid "Information Page"
-msgstr "Informationssida"
-
-msgid "Deactivate Until Allowed"
-msgstr "Deaktivera tills tillåtet"
-
-msgid "Theme"
-msgstr "Tema"
-
-msgid "This will send an e-mail to all editors (%s) when an author saves a draft"
-msgstr "Detta kommer att skicka ett e-post till alla redaktörer (%s) när en författare sparar ett utkast"
-
-msgid "The optimization was last run %s and will be run again %s"
-msgstr "Optimeringen kördes senast %s och kommer att köras igen %s"
-
-msgid "The optimization has not been run yet but will be %s"
-msgstr "Optimeringen har inte körts ännu men kommer att göra det %s"
-
-msgid "Optimize Now"
-msgstr "Optimera nu"
-
-msgid "There are no styles to restore"
-msgstr "Det fanns inga värden att återställa"
-
-msgid "Time"
-msgstr "Tid"
-
-msgid "Category"
-msgstr "Kategori"
-
-msgid "Yes"
-msgstr "Ja"
-
-msgid "And Change Setting on All Posts"
-msgstr "Och ändra inställning på alla inlägg"
-
-msgid "No"
-msgstr "Nej"
-
-msgid "Oops! The page that you were looking for does not seam to exist. If you think that it should exist, please let us know."
-msgstr "Hoppsan! Den sida som du sökte verkar inte finnas. Om du anser att den borde finnas, var vänlig säg till oss."
-
-msgid "This page will be displayed instead of the default 404 page"
-msgstr "Denna sida kommer att visas istället för standard 404-sida"
-
-msgid "Temporary Maintenance"
-msgstr "Tillfälligt underhåll"
-
-msgid "This site is undergoing maintenance. This usually takes less than a minute so you have been unfortunate to come to the site at this moment. If you reload the page in just a while it will surely be back as usual."
-msgstr "Sidan är för tillfället i underhållsläge. Det brukar ta mindre än en minut så du har haft otur som besökte webbsidan precis vid detta tillfälle. Om du testar att ladda om sidan om en liten stund så ska den säkerligen vara klar med detta."
-
-msgid "This page will be displayed when the website is updating"
-msgstr "Denna sida kommer att visas istället för standard underhållssidan"
-
-msgid "I could not write to %s. The file is writeable but the write was unsuccessful"
-msgstr "Jag kunde inte skriva till %s. Filen är skrivbar men något gick ändå fel"
-
-msgid "The content that I was about to write to %s was empty and the template came from %s"
-msgstr "Innehållet som jag skulle skriva till %s var tomt och mallen kom från %s"
-
-msgid "I could not write to %s. Please, make sure that this is writeable if you want this functionality to work properly"
-msgstr "Jag kunde inte skriva till %s. Var vänlig, se till så att denna är skrivbar om du vill att denna funktionalitet ska fungera som tänkt"
-
-msgid "This will display the maintenance message to everyone except you as a superadmin, until you inactivate this mode again"
-msgstr "Detta kommer att visa underhållsmeddelandet för alla utom du som är superadmin, tills dess att du inaktiverar detta läge igen"
-
-msgid "Sensitive Data"
-msgstr "Personlig info"
-
+#: ../include/classes.php:32
 msgid "Account details"
 msgstr "Kontodetaljer"
 
+#: ../include/classes.php:33
 msgid "Indicates whether you are logged in"
 msgstr "Indikerar om du är inloggad"
 
+#: ../include/classes.php:35
 msgid "Test if it is possible to set cookies"
 msgstr "Testa om det ens är möjligt att spara kakor i webbläsaren"
 
+#: ../include/classes.php:36
 msgid "Authentication details"
 msgstr "Information om inloggning"
 
+#: ../include/classes.php:38
 msgid "Time when user settings was last saved"
 msgstr "Tid när användarinställningar senast sparades"
 
+#: ../include/classes.php:39
 msgid "Customization for admin interface"
 msgstr "Inställningar för gränssnitt som inloggad användare"
 
+#: ../include/classes.php:43
 msgid "Maintain session if a post is password protected"
 msgstr "Kom ihåg att man har loggat in på en lösenordsskyddad sida"
 
+#: ../include/classes.php:48
 msgid "Remember comment author details"
 msgstr "Kom ihåg detaljer om författare till kommentarer"
 
+#: ../include/classes.php:53
 msgid "Remember if visitor accepts sensitive data on the site"
 msgstr "Kom ihåg om en besökare har accepterat insamling av personlig information på webbplatsen"
 
+#: ../include/classes.php:62
 msgid "Remember if a visitor has hidden the header news post"
 msgstr "Kom ihåg om en besökare har dolt nyhet i sidhuvudet"
 
+#: ../include/classes.php:72
+#: ../include/classes.php:79
 msgid "Remember if the visitor has seen the info"
 msgstr "Kom ihåg om besökaren har sett informationen"
 
+#: ../include/classes.php:72
 msgid "Time Limit"
 msgstr "Tidsbegränsning"
 
+#: ../include/classes.php:79
 msgid "Visit Limit"
 msgstr "Besöksgräns"
 
-msgid "Load the font %s"
-msgstr "Ladda typsnittet %s"
+#: ../include/classes.php:96
+msgid "Sensitive Data on This Site"
+msgstr "Personlig information på denna webbplats"
 
+#: ../include/classes.php:100
+msgid "Display Fingerprint"
+msgstr "Visa fingeravtryck"
+
+#: ../include/classes.php:110
+#: ../include/classes.php:352
+msgid "Information Page"
+msgstr "Informationssida"
+
+#: ../include/classes.php:114
+#: ../include/classes.php:358
+msgid "Deactivate Until Allowed"
+msgstr "Deaktivera tills tillåtet"
+
+#: ../include/classes.php:117
+msgid "Cookiebot"
+msgstr ""
+
+#: ../include/classes.php:134
+#: ../include/classes.php:352
+#: ../include/classes.php:358
+msgid "Cookies"
+msgstr "Kakor"
+
+#: ../include/classes.php:162
+#: ../include/classes.php:224
+msgid "Public"
+msgstr "Publik"
+
+#: ../include/classes.php:167
+#: ../include/classes.php:229
 msgid "Login"
 msgstr "Inloggning"
 
+#: ../include/classes.php:179
 msgid "without personal data"
 msgstr "utan personlig information"
 
+#: ../include/classes.php:217
+#, php-format
 msgid "%s was not saved in your browser but can be saved by the site"
 msgstr "%s var inte sparad in din webbläsare men kan sparas av webbplatsen"
 
+#: ../include/classes.php:234
 msgid "The font is loaded somewhere on the site"
 msgstr "Typsnittet laddas in någonstans på webbplatsen"
 
+#: ../include/classes.php:235
 msgid "Font"
 msgstr "Typsnitt"
 
+#: ../include/classes.php:240
 msgid "The IP address is collected somewhere on the site"
 msgstr "IP-adressen sparas någonstans på webbplatsen"
 
+#: ../include/classes.php:241
+msgid "IP"
+msgstr ""
+
+#: ../include/classes.php:260
 msgid "There is no sensitive data saved on this site"
 msgstr "Det sparas ingen personlig information på denna webbplats"
 
+#: ../include/classes.php:271
+msgid "This will display an icon and inform the visitor that this website is NOT collecting any sensitive data about the visitor."
+msgstr "Detta kommer att visa en ikon och informera besökaren om att denna webbplats INTE samlar in någon känslig data om besökaren.﻿"
+
+#: ../include/classes.php:293
 msgid "There is sensitive information on the public site that is saved for visitors."
 msgstr "Det finns känslig information på den publika webbplatsen som sparas för besökare."
 
+#: ../include/classes.php:298
 msgid "There is only sensitive information on this site that is saved when logging in so it is not necessary to add a page for this."
 msgstr "Det finns endast känslig information på denna webbplats som sparas när man loggar in, så det är inte nödvändigt att lägga till en sida för detta."
 
+#: ../include/classes.php:302
 msgid "The content from this page will be displayed on the site until the visitor clicks to accept the collection of sensitive data."
 msgstr "Innehållet från denna sida kommer att visas på webbplatsen tills dess att besökaren klickar för att acceptera insamlandet av personlig information."
 
+#: ../include/classes.php:312
 msgid "This will try to prevent sensitive information to be saved in the visitor's browser until the visitor have accepted your information from the page above"
 msgstr "Detta kommer att försöka motverka att känslig information sparas i besökarens webbläsare tills dess att besökaren har godkänt din information från sidan ovan"
 
+#: ../include/classes.php:338
 msgid "A cookie is saved when the visitor accepts the collection of sensitive data on the site, to make sure that the message asking for permission does not appear again."
 msgstr "En kaka sparas när besökaren godkänner insamling av personlig information på webbplatsen, för att säkerställa att meddelandet med frågan om godkännande inte dyker upp igen."
 
-msgid "Page %s"
-msgstr "Sida %s"
+#: ../include/classes.php:340
+msgid "Theme"
+msgstr "Tema"
 
+#: ../include/classes.php:380
+msgid "We do not collect or store sensitive information about you as a visitor. If you choose to submit data through forms or log in to the site's admin section, we will only retain the minimal information required to display the content you are authorized to access."
+msgstr "Vi samlar inte in eller lagrar känslig information om dig som besökare. Om du väljer att skicka in data via formulär eller logga in på webbplatsens adminsektion så sparar vi endast den information som krävs för att visa det innehåll som du har behörighet att komma åt."
+
+#: ../include/classes.php:409
 msgid "Accept"
 msgstr "Acceptera"
 
+#: ../include/classes.php:417
 msgid "Read More"
 msgstr "Läs mer"
 
+#: ../include/classes.php:430
 msgid "You have accepted that we collect sensitive data. Do you wish to remove this acceptance?"
 msgstr "Du har accepterat att vi får samla in personlig information. Vill du återkalla detta?"
 
-msgid "Go to Admin"
-msgstr "Gå till admin"
+#~ msgid "XML Sitemap for %s"
+#~ msgstr "Sidkarta för %s"
 
-msgid "Edit Page"
-msgstr "Redigera sida"
+#~ msgid "XML Sitemap for %s | %s"
+#~ msgstr "Sidkarta för %s | %s"
 
-msgid "Search here"
-msgstr "Sök här"
+#~ msgid "Title"
+#~ msgstr "Rubrik"
 
-msgid "Search"
-msgstr "Sök"
+#~ msgid "Last Modified"
+#~ msgstr "Senast ändrad"
 
-msgid "To view this protected post, enter the password below"
-msgstr "För att se denna lösenordsskyddade sida, fyll i lösenordet nedan"
+#~ msgid "Choose Here"
+#~ msgstr "Välj här"
 
-msgid "Submit"
-msgstr "Skicka"
+#~ msgid "Author"
+#~ msgstr "Författare"
 
-msgid "by %s"
-msgstr "av %s"
+#~ msgid "Categories"
+#~ msgstr "Kategorier"
 
-msgid "Generic"
-msgstr "Allmänt"
+#~ msgid "Discussion"
+#~ msgstr "Diskussion"
 
-msgid "Background"
-msgstr "Bakgrund"
+#~ msgid "Comments"
+#~ msgstr "Kommentarer"
 
-msgid "Color"
-msgstr "Färg"
+#~ msgid "Page Attributes"
+#~ msgstr "Sidattribut"
 
-msgid "Image"
-msgstr "Bild"
+#~ msgid "Custom Fields"
+#~ msgstr "Egna fält"
 
-msgid "Padding"
-msgstr "Tomrum"
+#~ msgid "Excerpt"
+#~ msgstr "Utdrag"
 
-msgid "Text Color"
-msgstr "Textfärg"
+#~ msgid "Featured Image"
+#~ msgstr "Utvald bild"
 
-msgid "Link Color"
-msgstr "Länkfärg"
+#~ msgid "Revisions"
+#~ msgstr "Versioner"
 
-msgid "Link Underline"
-msgstr "Linje under länk"
+#~ msgid "Slug"
+#~ msgstr "URL"
 
-msgid "Breakpoint"
-msgstr "Brytpunkt"
+#~ msgid "Tags"
+#~ msgstr "Taggar"
 
-msgid "Tablet"
-msgstr "Platta"
+#~ msgid "Trackbacks"
+#~ msgstr "Återkopplingar"
 
-msgid "Font Size"
-msgstr "Textstorlek"
+#~ msgid "Maintenance Mode Activated"
+#~ msgstr "Underhållsläge aktiverat"
 
-msgid "Mobile"
-msgstr "Mobil"
+#~ msgid "No Public Pages"
+#~ msgstr "Inga publika sidor"
 
-msgid "Scroll Bar"
-msgstr "Skrollbar"
+#~ msgid "Requires Login"
+#~ msgstr "Kräver inloggning"
 
-msgid "Aside Image Width"
-msgstr "Bredd på bilder i sidokolumn"
+#~ msgid "No Index"
+#~ msgstr "Ingen indexering"
 
-msgid "Print"
-msgstr "Skriv ut"
+#~ msgid "Always redirect visitors to the login page"
+#~ msgstr "Skicka alltid besökare till inloggningssidan"
 
-msgid "Forms"
-msgstr "Formulär"
+#~ msgid "Require login for public site"
+#~ msgstr "Kräv inloggning innan besök på webbsidan"
 
-msgid "Background Color"
-msgstr "Bakgrundsfärg"
+#~ msgid "Templates"
+#~ msgstr "Mallar"
 
-msgid "Container"
-msgstr "Behållare"
+#~ msgid "Hidden Meta Boxes"
+#~ msgstr "Dolda metaboxar"
 
-msgid "Border"
-msgstr "Kant"
+#~ msgid "Send Email when Draft is Saved"
+#~ msgstr "Skicka e-post när utkast sparas"
 
-msgid "Border Radius"
-msgstr "Radie på ram"
+#~ msgid "Ignore Style on Restore"
+#~ msgstr "Ignorera vid återställning"
 
-msgid "Join Fields"
-msgstr "Slå ihop fält"
+#~ msgid "Enable XML-RPC"
+#~ msgstr "Aktivera XML-RPC"
 
-msgid "Fields"
-msgstr "Fält"
+#~ msgid "Optimize"
+#~ msgstr "Optimera"
 
-msgid "Buttons"
-msgstr "Knappar"
+#~ msgid "Enable Edit Mode"
+#~ msgstr "Aktivera redigeringsläge"
 
-msgid "Secondary"
-msgstr "Sekundär"
+#~ msgid "Display Author Pages"
+#~ msgstr "Visa författarsidor"
 
-msgid "Negative"
-msgstr "Negativ"
+#~ msgid "Title Format"
+#~ msgstr "Rubrikformat"
 
-msgid "Before Header"
-msgstr "Före sidhuvud"
+#~ msgid "Display Post Meta"
+#~ msgstr "Visa information om inlägg"
 
-msgid "Full Width"
-msgstr "Fullbredd"
+#~ msgid "Allow Comments"
+#~ msgstr "Tillåt kommentarer"
+
+#~ msgid "Display scroll-to-top-link"
+#~ msgstr "Visa länk för att skrolla längst upp på sidan"
+
+#~ msgid "Scroll-to-top Text"
+#~ msgstr "Skrolla-till-toppen-text"
+
+#~ msgid "Redirect Single Result in Search"
+#~ msgstr "Skicka vidare om ett sökresultat finns"
+
+#~ msgid "404 Page"
+#~ msgstr "404-sida"
+
+#~ msgid "Maintenance Page"
+#~ msgstr "Underhållssida"
 
-msgid "Header"
-msgstr "Sidhuvud"
+#~ msgid "Activate Maintenance Mode"
+#~ msgstr "Aktivera underhållssida"
 
-msgid "Override background with page background"
-msgstr "Ersätt bakgrund med sidbakgrund"
+#~ msgid ""
+#~ "This will send an e-mail to all editors (%s) when an author saves a draft"
+#~ msgstr ""
+#~ "Detta kommer att skicka ett e-post till alla redaktörer (%s) när en "
+#~ "författare sparar ett utkast"
 
-msgid "Logo"
-msgstr "Logga"
+#~ msgid "The optimization was last run %s and will be run again %s"
+#~ msgstr "Optimeringen kördes senast %s och kommer att köras igen %s"
 
-msgid "Hover"
-msgstr "Mus över"
+#~ msgid "The optimization has not been run yet but will be %s"
+#~ msgstr "Optimeringen har inte körts ännu men kommer att göra det %s"
 
-msgid "Alignment"
-msgstr "Justering"
+#~ msgid "Optimize Now"
+#~ msgstr "Optimera nu"
 
-msgid "Width"
-msgstr "Bredd"
+#~ msgid "There are no styles to restore"
+#~ msgstr "Det fanns inga värden att återställa"
 
-msgid "Tagline"
-msgstr "Slogan"
+#~ msgid "Time"
+#~ msgstr "Tid"
 
-msgid "Compressed"
-msgstr "Komprimerad"
+#~ msgid "Category"
+#~ msgstr "Kategori"
 
-msgid "Click to expand"
-msgstr "Klicka för att expandera"
+#~ msgid "Yes"
+#~ msgstr "Ja"
 
-msgid "Clear"
-msgstr "Rensa"
+#~ msgid "And Change Setting on All Posts"
+#~ msgstr "Och ändra inställning på alla inlägg"
 
-msgid "Weight"
-msgstr "Vikt"
+#~ msgid "No"
+#~ msgstr "Nej"
 
-msgid "Link Padding"
-msgstr "Tomrum runt länkar"
+#~ msgid ""
+#~ "Oops! The page that you were looking for does not seam to exist. If you "
+#~ "think that it should exist, please let us know."
+#~ msgstr ""
+#~ "Hoppsan! Den sida som du sökte verkar inte finnas. Om du anser att den "
+#~ "borde finnas, var vänlig säg till oss."
 
-msgid "Underline Color"
-msgstr "Färg på understrykning"
+#~ msgid "This page will be displayed instead of the default 404 page"
+#~ msgstr "Denna sida kommer att visas istället för standard 404-sida"
 
-msgid "Current"
-msgstr "Nuvarande"
+#~ msgid "Temporary Maintenance"
+#~ msgstr "Tillfälligt underhåll"
 
-msgid "Submenu"
-msgstr "Undermeny"
+#~ msgid ""
+#~ "This site is undergoing maintenance. This usually takes less than a "
+#~ "minute so you have been unfortunate to come to the site at this moment. "
+#~ "If you reload the page in just a while it will surely be back as usual."
+#~ msgstr ""
+#~ "Sidan är för tillfället i underhållsläge. Det brukar ta mindre än en "
+#~ "minut så du har haft otur som besökte webbsidan precis vid detta "
+#~ "tillfälle. Om du testar att ladda om sidan om en liten stund så ska den "
+#~ "säkerligen vara klar med detta."
 
-msgid "Direction"
-msgstr "Riktning"
+#~ msgid "This page will be displayed when the website is updating"
+#~ msgstr "Denna sida kommer att visas istället för standard underhållssidan"
 
-msgid "Show Up Arrow"
-msgstr "Visa pil uppåt"
+#~ msgid ""
+#~ "I could not write to %s. The file is writeable but the write was "
+#~ "unsuccessful"
+#~ msgstr ""
+#~ "Jag kunde inte skriva till %s. Filen är skrivbar men något gick ändå fel"
 
-msgid "Mobile Menu"
-msgstr "Mobilmeny"
+#~ msgid ""
+#~ "The content that I was about to write to %s was empty and the template "
+#~ "came from %s"
+#~ msgstr ""
+#~ "Innehållet som jag skulle skriva till %s var tomt och mallen kom från %s"
 
-msgid "Display when menu runs out of space"
-msgstr "Visa när meny får slut på plats"
+#~ msgid ""
+#~ "I could not write to %s. Please, make sure that this is writeable if you "
+#~ "want this functionality to work properly"
+#~ msgstr ""
+#~ "Jag kunde inte skriva till %s. Var vänlig, se till så att denna är "
+#~ "skrivbar om du vill att denna funktionalitet ska fungera som tänkt"
 
-msgid "Menu"
-msgstr "Meny"
+#~ msgid ""
+#~ "This will display the maintenance message to everyone except you as a "
+#~ "superadmin, until you inactivate this mode again"
+#~ msgstr ""
+#~ "Detta kommer att visa underhållsmeddelandet för alla utom du som är "
+#~ "superadmin, tills dess att du inaktiverar detta läge igen"
 
-msgid "Slide Menu"
-msgstr "Sidomeny"
+#~ msgid "Sensitive Data"
+#~ msgstr "Personlig info"
 
-msgid "Fade"
-msgstr "Tona"
+#~ msgid "Load the font %s"
+#~ msgstr "Ladda typsnittet %s"
 
-msgid "Animation Length"
-msgstr "Längd på animation"
+#~ msgid "Page %s"
+#~ msgstr "Sida %s"
 
-msgid "Content Offset"
-msgstr "Justering av innehåll"
+#~ msgid "Go to Admin"
+#~ msgstr "Gå till admin"
 
-msgid "Max Width"
-msgstr "Maxbredd"
+#~ msgid "Edit Page"
+#~ msgstr "Redigera sida"
 
-msgid "Letter Spacing"
-msgstr "Teckenavstånd"
+#~ msgid "Search here"
+#~ msgstr "Sök här"
 
-msgid "Text Indent"
-msgstr "Indentering av text"
+#~ msgid "Search"
+#~ msgstr "Sök"
 
-msgid "Pre Content"
-msgstr "Före innehåll"
+#~ msgid "To view this protected post, enter the password below"
+#~ msgstr "För att se denna lösenordsskyddade sida, fyll i lösenordet nedan"
 
-msgid "After Header"
-msgstr "Efter sidhuvud"
+#~ msgid "Submit"
+#~ msgstr "Skicka"
 
-msgid "Widget Padding"
-msgstr "Tomrum runt widget"
+#~ msgid "by %s"
+#~ msgstr "av %s"
 
-msgid "Content"
-msgstr "Innehåll"
+#~ msgid "Generic"
+#~ msgstr "Allmänt"
 
-msgid "Match Height with Window Size"
-msgstr "Justera höjd utifrån fönsterstorlek"
+#~ msgid "Background"
+#~ msgstr "Bakgrund"
 
-msgid "Main Column Alignment"
-msgstr "Justering på huvudkolumn"
+#~ msgid "Color"
+#~ msgstr "Färg"
 
-msgid "Main Column Width"
-msgstr "Bredd på huvudkolumn"
+#~ msgid "Image"
+#~ msgstr "Bild"
 
-msgid "Headings"
-msgstr "Rubriker"
+#~ msgid "Padding"
+#~ msgstr "Tomrum"
 
-msgid "Border Bottom"
-msgstr "Kant undertill"
+#~ msgid "Text Color"
+#~ msgstr "Textfärg"
 
-msgid "Margin"
-msgstr "Marginal"
+#~ msgid "Link Color"
+#~ msgstr "Länkfärg"
 
-msgid "Heading Alignment"
-msgstr "Justering på rubriker"
+#~ msgid "Link Underline"
+#~ msgstr "Linje under länk"
 
-msgid "Line Height"
-msgstr "Radhöjd"
+#~ msgid "Breakpoint"
+#~ msgstr "Brytpunkt"
 
-msgid "Quote Size"
-msgstr "Textstorlek på citat"
+#~ msgid "Tablet"
+#~ msgstr "Platta"
 
-msgid "Margin between Content"
-msgstr "Marginal mellan innehåll"
+#~ msgid "Font Size"
+#~ msgstr "Textstorlek"
 
-msgid "Drop Cap Size"
-msgstr "Storlek på första bokstav"
+#~ msgid "Mobile"
+#~ msgstr "Mobil"
 
-msgid "Paragraph Indentation"
-msgstr "Indentering på paragraf"
+#~ msgid "Scroll Bar"
+#~ msgstr "Skrollbar"
 
-msgid "Aside"
-msgstr "Sidokolumn"
+#~ msgid "Aside Image Width"
+#~ msgstr "Bredd på bilder i sidokolumn"
 
-msgid "Paragraph Size"
-msgstr "Storlek på paragraf"
+#~ msgid "Print"
+#~ msgstr "Skriv ut"
 
-msgid "Sticky Position"
-msgstr "Klistrad position"
+#~ msgid "Forms"
+#~ msgstr "Formulär"
 
-msgid "Left"
-msgstr "Vänster"
+#~ msgid "Background Color"
+#~ msgstr "Bakgrundsfärg"
 
-msgid "Right"
-msgstr "Höger"
+#~ msgid "Container"
+#~ msgstr "Behållare"
 
-msgid "Widget Background"
-msgstr "Bakgrund på widgets"
+#~ msgid "Border"
+#~ msgstr "Kant"
 
-msgid "Widget Border"
-msgstr "Kant runt widget"
+#~ msgid "Border Radius"
+#~ msgstr "Radie på ram"
 
-msgid "Size"
-msgstr "Storlek"
+#~ msgid "Join Fields"
+#~ msgstr "Slå ihop fält"
 
-msgid "Pre Footer"
-msgstr "Före sidfot"
+#~ msgid "Fields"
+#~ msgstr "Fält"
 
-msgid "Footer"
-msgstr "Sidfot"
+#~ msgid "Buttons"
+#~ msgstr "Knappar"
 
-msgid "Widget Flex"
-msgstr "Flexbox för widget"
+#~ msgid "Secondary"
+#~ msgstr "Sekundär"
 
-msgid "Widget Overflow"
-msgstr "Overflow på widget"
+#~ msgid "Negative"
+#~ msgstr "Negativ"
 
-msgid "Widget Heading Margin"
-msgstr "Marginal på rubrik i widget"
+#~ msgid "Before Header"
+#~ msgstr "Före sidhuvud"
 
-msgid "Widget Heading Text Transform"
-msgstr "Transform på rubrik i widget"
+#~ msgid "Full Width"
+#~ msgstr "Fullbredd"
 
-msgid "Paragraph/List Margin"
-msgstr "Marginal på paragraf/lista"
+#~ msgid "Header"
+#~ msgstr "Sidhuvud"
 
-msgid "Link Background"
-msgstr "Bakgrund på länkar"
+#~ msgid "Override background with page background"
+#~ msgstr "Ersätt bakgrund med sidbakgrund"
 
-msgid "Link Margin"
-msgstr "Marginal på länkar"
+#~ msgid "Logo"
+#~ msgstr "Logga"
 
-msgid "Custom"
-msgstr "Anpassat"
+#~ msgid "Hover"
+#~ msgstr "Mus över"
 
-msgid "External CSS"
-msgstr "Extern CSS"
+#~ msgid "Alignment"
+#~ msgstr "Justering"
 
-msgid "Custom CSS"
-msgstr "Anpassad CSS"
+#~ msgid "Width"
+#~ msgstr "Bredd"
 
-msgid "Logo for %s"
-msgstr "Logga för %s"
+#~ msgid "Tagline"
+#~ msgstr "Slogan"
 
-msgid "Mobile Logo for %s"
-msgstr "Mobil logga för %s"
+#~ msgid "Compressed"
+#~ msgstr "Komprimerad"
 
-msgid "Search for"
-msgstr "Sök efter"
+#~ msgid "Click to expand"
+#~ msgstr "Klicka för att expandera"
 
-msgid "copy"
-msgstr "kopia"
+#~ msgid "Clear"
+#~ msgstr "Rensa"
 
-msgid "Error cloning post"
-msgstr "Något gick fel vid kloningen"
+#~ msgid "Weight"
+#~ msgstr "Vikt"
 
-msgid "Clone"
-msgstr "Klona"
+#~ msgid "Link Padding"
+#~ msgstr "Tomrum runt länkar"
 
-msgid "The page %s have the exact same title. Please, try to not have duplicates because that will hurt your SEO."
-msgstr "Sidan %s har exakt samma titel. Försök att inte ha sidor med samma titel för det skadar din SEO"
+#~ msgid "Underline Color"
+#~ msgstr "Färg på understrykning"
 
-msgid "You have not set a title for this page"
-msgstr "Du har inte angett en titel för denna sida"
+#~ msgid "Current"
+#~ msgstr "Nuvarande"
 
-msgid "The page %s have the exact same excerpt"
-msgstr "Sidan %s har exakt samma utdrag"
+#~ msgid "Submenu"
+#~ msgstr "Undermeny"
 
-msgid "You have not set an excerpt for this page"
-msgstr "Du har inte angett ett utdrag för denna sida"
+#~ msgid "Direction"
+#~ msgstr "Riktning"
 
-msgid "The URL is not correlated to the title"
-msgstr "URLen stämmer inte överens med titeln"
+#~ msgid "Show Up Arrow"
+#~ msgstr "Visa pil uppåt"
 
-msgid "The title might be too long to show in search engines"
-msgstr "Rubriken kan vara för lång för att visas i sin helhet i sökmotorer"
+#~ msgid "Mobile Menu"
+#~ msgstr "Mobilmeny"
 
-msgid "The excerpt (meta description) might be too long to show in search engines"
-msgstr "Utdraget (meta description) kan vara för lång för att visas i sin helhet i sökmotorer"
+#~ msgid "Display when menu runs out of space"
+#~ msgstr "Visa när meny får slut på plats"
 
-msgid "The content should be longer"
-msgstr "Innehållet bör vara längre"
+#~ msgid "Menu"
+#~ msgstr "Meny"
 
-msgid "There should be an H2 in the content"
-msgstr "Det bör finnas med en H2 i innehållet"
+#~ msgid "Slide Menu"
+#~ msgstr "Sidomeny"
 
-msgid "The page is password protected"
-msgstr "Sidan är lösenordsskyddad"
+#~ msgid "Fade"
+#~ msgstr "Tona"
 
-msgid "The page is not published or indexed"
-msgstr "Sidan är inte publicerad eller indexerad"
+#~ msgid "Animation Length"
+#~ msgstr "Längd på animation"
 
-msgid "Well done! The page is SEO approved!"
-msgstr "Bra jobbat! Sidan är SEO-godkänd!"
+#~ msgid "Content Offset"
+#~ msgstr "Justering av innehåll"
 
-msgid "Index"
-msgstr "Indexering"
+#~ msgid "Max Width"
+#~ msgstr "Maxbredd"
 
-msgid "Do not Index"
-msgstr "Indexera inte"
+#~ msgid "Letter Spacing"
+#~ msgstr "Teckenavstånd"
 
-msgid "Do not Follow Links"
-msgstr "Följ inte länkar"
+#~ msgid "Text Indent"
+#~ msgstr "Indentering av text"
 
-msgid "Do not Index and do not follow links"
-msgstr "Indexera inte och följ inte länkar"
+#~ msgid "Pre Content"
+#~ msgstr "Före innehåll"
 
-msgid "Publish"
-msgstr "Publicera"
+#~ msgid "After Header"
+#~ msgstr "Efter sidhuvud"
 
-msgid "Unpublish"
-msgstr "Avpublicera"
+#~ msgid "Widget Padding"
+#~ msgstr "Tomrum runt widget"
 
-msgid "Publish Settings"
-msgstr "Inställningar för publicering"
+#~ msgid "Content"
+#~ msgstr "Innehåll"
 
-msgid "The draft (%s) has been saved"
-msgstr "Utkastet (%s) har sparats"
+#~ msgid "Match Height with Window Size"
+#~ msgstr "Justera höjd utifrån fönsterstorlek"
 
-msgid "The draft (%s) has been saved and might be ready for publishing"
-msgstr "Utkastet (%s) har sparats och kan vara redo för publicering"
+#~ msgid "Main Column Alignment"
+#~ msgstr "Justering på huvudkolumn"
 
-msgid "Redirect"
-msgstr "Vidarebefordra"
+#~ msgid "Main Column Width"
+#~ msgstr "Bredd på huvudkolumn"
 
-msgid "Center"
-msgstr "Centrera"
+#~ msgid "Headings"
+#~ msgstr "Rubriker"
 
-msgid "Both"
-msgstr "Båda"
+#~ msgid "Border Bottom"
+#~ msgstr "Kant undertill"
 
-msgid "None"
-msgstr "Ingen"
+#~ msgid "Margin"
+#~ msgstr "Marginal"
 
-msgid "Horizontal"
-msgstr "Horisontell"
+#~ msgid "Heading Alignment"
+#~ msgstr "Justering på rubriker"
 
-msgid "Vertical"
-msgstr "Vertikal"
+#~ msgid "Line Height"
+#~ msgstr "Radhöjd"
 
-msgid "Initial"
-msgstr "Original"
+#~ msgid "Quote Size"
+#~ msgstr "Textstorlek på citat"
 
-msgid "Inherit"
-msgstr "Ärv"
+#~ msgid "Margin between Content"
+#~ msgstr "Marginal mellan innehåll"
 
-msgid "Visible"
-msgstr "Visa"
+#~ msgid "Drop Cap Size"
+#~ msgstr "Storlek på första bokstav"
 
-msgid "Hidden"
-msgstr "Dölj"
+#~ msgid "Paragraph Indentation"
+#~ msgstr "Indentering på paragraf"
 
-msgid "Scroll"
-msgstr "Skroll"
+#~ msgid "Aside"
+#~ msgstr "Sidokolumn"
 
-msgid "Absolute"
-msgstr "Absolut"
+#~ msgid "Paragraph Size"
+#~ msgstr "Storlek på paragraf"
 
-msgid "Fixed"
-msgstr "Fixerad"
+#~ msgid "Sticky Position"
+#~ msgstr "Klistrad position"
 
-msgid "Relative"
-msgstr "Relativ"
+#~ msgid "Left"
+#~ msgstr "Vänster"
 
-msgid "Sticky"
-msgstr "Klistrad"
+#~ msgid "Right"
+#~ msgstr "Höger"
 
-msgid "Underline"
-msgstr "Linje"
+#~ msgid "Widget Background"
+#~ msgstr "Bakgrund på widgets"
 
-msgid "Uppercase"
-msgstr "Versaler"
+#~ msgid "Widget Border"
+#~ msgstr "Kant runt widget"
 
-msgid "Lowercase"
-msgstr "Gemener"
+#~ msgid "Size"
+#~ msgstr "Storlek"
 
-msgid "Lighter than parent element"
-msgstr "Tunnare än förälder"
+#~ msgid "Pre Footer"
+#~ msgstr "Före sidfot"
 
-msgid "Regular"
-msgstr "Vanliga"
+#~ msgid "Footer"
+#~ msgstr "Sidfot"
 
-msgid "Bold"
-msgstr "Fet"
+#~ msgid "Widget Flex"
+#~ msgstr "Flexbox för widget"
 
-msgid "Bolder than parent element"
-msgstr "Fetare än förälder"
+#~ msgid "Widget Overflow"
+#~ msgstr "Overflow på widget"
 
-msgid "Theme Updates"
-msgstr "Temauppdateringar"
+#~ msgid "Widget Heading Margin"
+#~ msgstr "Marginal på rubrik i widget"
 
-msgid "The theme settings were backed up"
-msgstr "Temainställningarna sparades"
+#~ msgid "Widget Heading Text Transform"
+#~ msgstr "Transform på rubrik i widget"
 
-msgid "It was not possible to backup the theme settings"
-msgstr "Det gick inte att ta backup på temainställningarna"
+#~ msgid "Paragraph/List Margin"
+#~ msgstr "Marginal på paragraf/lista"
 
-msgid "There were no theme settings to save"
-msgstr "Det fanns inga temainställningar att spara"
+#~ msgid "Link Background"
+#~ msgstr "Bakgrund på länkar"
 
-msgid "The file does not exist anymore. It might be out of date."
-msgstr "Filen finns inte längre. Den kan ha tagits bort."
+#~ msgid "Link Margin"
+#~ msgstr "Marginal på länkar"
 
-msgid "I restored the theme backup for you"
-msgstr "Jag återställde temabackupen åt dig"
+#~ msgid "Custom"
+#~ msgstr "Anpassat"
 
-msgid "There is something wrong with the source to restore"
-msgstr "Det verkar vara något fel på källan som försöker återställas"
+#~ msgid "External CSS"
+#~ msgstr "Extern CSS"
 
-msgid "The file was deleted successfully"
-msgstr "Filen raderades"
+#~ msgid "Custom CSS"
+#~ msgstr "Anpassad CSS"
 
-msgid "The theme at %s has got a newer version of saved style which can be %srestored here%s"
-msgstr "Temat på %s har en nyare version på sparad design som kan %såterställas här%s"
+#~ msgid "Logo for %s"
+#~ msgstr "Logga för %s"
 
-msgid "Theme Backup"
-msgstr "Temabackup"
+#~ msgid "Mobile Logo for %s"
+#~ msgstr "Mobil logga för %s"
 
-msgid "Existing"
-msgstr "Existerande"
+#~ msgid "Search for"
+#~ msgstr "Sök efter"
 
-msgid "Date"
-msgstr "Datum"
+#~ msgid "copy"
+#~ msgstr "kopia"
 
-msgid "Download"
-msgstr "Ladda ner"
+#~ msgid "Error cloning post"
+#~ msgstr "Något gick fel vid kloningen"
 
-msgid "Restore"
-msgstr "Återställ"
+#~ msgid "Clone"
+#~ msgstr "Klona"
 
-msgid "Delete"
-msgstr "Radera"
+#~ msgid ""
+#~ "The page %s have the exact same title. Please, try to not have duplicates "
+#~ "because that will hurt your SEO."
+#~ msgstr ""
+#~ "Sidan %s har exakt samma titel. Försök att inte ha sidor med samma titel "
+#~ "för det skadar din SEO"
 
-msgid "External Backup"
-msgstr "Extern backup"
+#~ msgid "You have not set a title for this page"
+#~ msgstr "Du har inte angett en titel för denna sida"
 
-msgid "New Backup"
-msgstr "Ny backup"
+#~ msgid "The page %s have the exact same excerpt"
+#~ msgstr "Sidan %s har exakt samma utdrag"
 
-msgid "Save"
-msgstr "Spara"
+#~ msgid "You have not set an excerpt for this page"
+#~ msgstr "Du har inte angett ett utdrag för denna sida"
 
-msgid "New '%s'"
-msgstr "Ny '%s'"
+#~ msgid "The URL is not correlated to the title"
+#~ msgstr "URLen stämmer inte överens med titeln"
 
-msgid "E-mail"
-msgstr "E-post"
+#~ msgid "The title might be too long to show in search engines"
+#~ msgstr "Rubriken kan vara för lång för att visas i sin helhet i sökmotorer"
 
-msgid "Updated"
-msgstr "Uppdaterad"
+#~ msgid ""
+#~ "The excerpt (meta description) might be too long to show in search engines"
+#~ msgstr ""
+#~ "Utdraget (meta description) kan vara för lång för att visas i sin helhet "
+#~ "i sökmotorer"
 
-msgid "This is the template theme design"
-msgstr "Detta är mallen för temadesign"
+#~ msgid "The content should be longer"
+#~ msgstr "Innehållet bör vara längre"
 
-msgid "Update"
-msgstr "Uppdatera"
+#~ msgid "There should be an H2 in the content"
+#~ msgstr "Det bör finnas med en H2 i innehållet"
 
-msgid "The theme design is up to date"
-msgstr "Temadesignen är uppdaterad"
+#~ msgid "The page is password protected"
+#~ msgstr "Sidan är lösenordsskyddad"
 
-msgid "Change"
-msgstr "Byt"
+#~ msgid "The page is not published or indexed"
+#~ msgstr "Sidan är inte publicerad eller indexerad"
 
-msgid "unknown"
-msgstr "okänd"
+#~ msgid "Well done! The page is SEO approved!"
+#~ msgstr "Bra jobbat! Sidan är SEO-godkänd!"
 
-msgid "I have optimized the site for you"
-msgstr "Jag har optimerat webbplatsen åt dig"
+#~ msgid "Index"
+#~ msgstr "Indexering"
 
-msgid "Add Widget Area"
-msgstr "Lägg till widgetområde"
+#~ msgid "Do not Index"
+#~ msgstr "Indexera inte"
 
-msgid "Widget Area"
-msgstr "Widgetområde"
+#~ msgid "Do not Follow Links"
+#~ msgstr "Följ inte länkar"
 
-msgid "ID (Has to be unique)"
-msgstr "ID (Måste vara unikt)"
+#~ msgid "Do not Index and do not follow links"
+#~ msgstr "Indexera inte och följ inte länkar"
 
-msgid "Name"
-msgstr "Namn"
+#~ msgid "Publish"
+#~ msgstr "Publicera"
 
-msgid "Classes"
-msgstr "Klasser"
+#~ msgid "Unpublish"
+#~ msgstr "Avpublicera"
 
-msgid "Columns"
-msgstr "Kolumner"
+#~ msgid "Publish Settings"
+#~ msgstr "Inställningar för publicering"
 
-msgid "Column Space"
-msgstr "Tomrum mellan kolumner"
+#~ msgid "The draft (%s) has been saved"
+#~ msgstr "Utkastet (%s) har sparats"
 
-msgid "Display Logo"
-msgstr "Visa logga"
+#~ msgid "The draft (%s) has been saved and might be ready for publishing"
+#~ msgstr "Utkastet (%s) har sparats och kan vara redo för publicering"
 
-msgid "Logo and Tagline"
-msgstr "Logga och slogan"
+#~ msgid "Redirect"
+#~ msgstr "Vidarebefordra"
 
-msgid "If these are left empty, the chosen logo for the site will be displayed. If there is no chosen logo the site name will be displayed instead."
-msgstr "Om dessa fält lämnas tomma så visas vald logga. Om det inte finns någon vald logga i temat visas istället sidans namn."
+#~ msgid "Center"
+#~ msgstr "Centrera"
 
-msgid "What to Display"
-msgstr "Vad som ska visas"
+#~ msgid "Both"
+#~ msgstr "Båda"
 
-msgid "Display Search Form"
-msgstr "Visa sökformulär"
+#~ msgid "None"
+#~ msgstr "Ingen"
 
-msgid "Placeholder"
-msgstr "Valfri text"
+#~ msgid "Horizontal"
+#~ msgstr "Horisontell"
 
-msgid "Hide on Mobile"
-msgstr "Dölj på mobil"
+#~ msgid "Vertical"
+#~ msgstr "Vertikal"
 
-msgid "Animate"
-msgstr "Animera"
+#~ msgid "Initial"
+#~ msgstr "Original"
 
-msgid "Listen to Keystroke"
-msgstr "Lyssna efter tangenttryck"
+#~ msgid "Inherit"
+#~ msgstr "Ärv"
 
-msgid "Display News/Posts"
-msgstr "Visa nyheter/inlägg"
+#~ msgid "Visible"
+#~ msgstr "Visa"
 
-msgid "News"
-msgstr "Nyheter"
+#~ msgid "Hidden"
+#~ msgstr "Dölj"
 
-msgid "Edit Item"
-msgstr "Redigera objekt"
+#~ msgid "Scroll"
+#~ msgstr "Skroll"
 
-msgid "Default"
-msgstr "Standard"
+#~ msgid "Absolute"
+#~ msgstr "Absolut"
 
-msgid "Post It"
-msgstr "Post-It"
+#~ msgid "Fixed"
+#~ msgstr "Fixerad"
 
-msgid "Simple"
-msgstr "Enkel"
+#~ msgid "Relative"
+#~ msgstr "Relativ"
 
-msgid "Compact"
-msgstr "Kompakt"
+#~ msgid "Sticky"
+#~ msgstr "Klistrad"
 
-msgid "Design"
-msgstr "Utseende"
+#~ msgid "Underline"
+#~ msgstr "Linje"
 
-msgid "Amount"
-msgstr "Antal"
+#~ msgid "Uppercase"
+#~ msgstr "Versaler"
 
-msgid "h"
-msgstr "tim"
+#~ msgid "Lowercase"
+#~ msgstr "Gemener"
 
-msgid "Button to Hide"
-msgstr "Knapp för att dölja"
+#~ msgid "Lighter than parent element"
+#~ msgstr "Tunnare än förälder"
 
-msgid "Display Arrows"
-msgstr "Visa pilar"
+#~ msgid "Regular"
+#~ msgstr "Vanliga"
 
-msgid "Autoscroll"
-msgstr "Automatisk skroll"
+#~ msgid "Bold"
+#~ msgstr "Fet"
 
-msgid "Display Title"
-msgstr "Visa rubrik"
+#~ msgid "Bolder than parent element"
+#~ msgstr "Fetare än förälder"
 
-msgid "Display Excerpt"
-msgstr "Visa utdrag"
+#~ msgid "Theme Updates"
+#~ msgstr "Temauppdateringar"
 
-msgid "Expand Content on Current Page"
-msgstr "Utöka innehåll på nuvarande sida"
+#~ msgid "The theme settings were backed up"
+#~ msgstr "Temainställningarna sparades"
 
-msgid "Display Info Module"
-msgstr "Visa infomodul"
+#~ msgid "It was not possible to backup the theme settings"
+#~ msgstr "Det gick inte att ta backup på temainställningarna"
 
-msgid "Info Module"
-msgstr "Infomodul"
+#~ msgid "There were no theme settings to save"
+#~ msgstr "Det fanns inga temainställningar att spara"
 
-msgid "Button Text"
-msgstr "Knapptext"
+#~ msgid "The file does not exist anymore. It might be out of date."
+#~ msgstr "Filen finns inte längre. Den kan ha tagits bort."
 
-msgid "Page"
-msgstr "Sida"
+#~ msgid "I restored the theme backup for you"
+#~ msgstr "Jag återställde temabackupen åt dig"
 
-msgid "Link"
-msgstr "Länk"
+#~ msgid "There is something wrong with the source to restore"
+#~ msgstr "Det verkar vara något fel på källan som försöker återställas"
 
-msgid "days"
-msgstr "dagar"
+#~ msgid "The file was deleted successfully"
+#~ msgstr "Filen raderades"
 
-msgid "times"
-msgstr "gånger"
+#~ msgid ""
+#~ "The theme at %s has got a newer version of saved style which can be %"
+#~ "srestored here%s"
+#~ msgstr ""
+#~ "Temat på %s har en nyare version på sparad design som kan %såterställas "
+#~ "här%s"
 
-msgid "Display Related Posts"
-msgstr "Visa relaterade inlägg"
+#~ msgid "Theme Backup"
+#~ msgstr "Temabackup"
 
-msgid "Related Posts"
-msgstr "Relaterade inlägg"
+#~ msgid "Existing"
+#~ msgstr "Existerande"
 
-msgid "Promote Pages"
-msgstr "Promota sidor"
+#~ msgid "Date"
+#~ msgstr "Datum"
 
-msgid "Promotion"
-msgstr "Promota"
+#~ msgid "Download"
+#~ msgstr "Ladda ner"
 
-msgid "Pages"
-msgstr "Sidor"
+#~ msgid "Restore"
+#~ msgstr "Återställ"
 
-msgid "Display Titles"
-msgstr "Visa rubriker"
+#~ msgid "Delete"
+#~ msgstr "Radera"
 
-msgid "Display Table of Contents"
-msgstr "Visa innehållsförteckning"
+#~ msgid "External Backup"
+#~ msgstr "Extern backup"
 
-msgid "Table of Contents"
-msgstr "Innehållsförteckning"
+#~ msgid "New Backup"
+#~ msgstr "Ny backup"
 
-msgid "Advanced"
-msgstr "Avancerat"
+#~ msgid "Save"
+#~ msgstr "Spara"
 
-msgid "Main"
-msgstr "Huvudmeny"
+#~ msgid "New '%s'"
+#~ msgstr "Ny '%s'"
 
-msgid "Main and Secondary Menu"
-msgstr "Huvud- och sekundär meny"
+#~ msgid "E-mail"
+#~ msgstr "E-post"
 
-msgid "Slide in From Right"
-msgstr "Glid in från höger"
+#~ msgid "Updated"
+#~ msgstr "Uppdaterad"
 
-msgid "Not Found"
-msgstr "Hittades inte"
+#~ msgid "This is the template theme design"
+#~ msgstr "Detta är mallen för temadesign"
 
-msgid "Apologies, but the page you requested could not be found. Perhaps searching will help"
-msgstr "Vi ber om ursäkt, men sidan som du letade efter gick inte att hitta. Kanske en sökning kan hjälpa"
+#~ msgid "Update"
+#~ msgstr "Uppdatera"
 
+#~ msgid "The theme design is up to date"
+#~ msgstr "Temadesignen är uppdaterad"
+
+#~ msgid "Change"
+#~ msgstr "Byt"
+
+#~ msgid "unknown"
+#~ msgstr "okänd"
+
+#~ msgid "I have optimized the site for you"
+#~ msgstr "Jag har optimerat webbplatsen åt dig"
+
+#~ msgid "Add Widget Area"
+#~ msgstr "Lägg till widgetområde"
+
+#~ msgid "Widget Area"
+#~ msgstr "Widgetområde"
+
+#~ msgid "ID (Has to be unique)"
+#~ msgstr "ID (Måste vara unikt)"
+
+#~ msgid "Name"
+#~ msgstr "Namn"
+
+#~ msgid "Classes"
+#~ msgstr "Klasser"
+
+#~ msgid "Columns"
+#~ msgstr "Kolumner"
+
+#~ msgid "Column Space"
+#~ msgstr "Tomrum mellan kolumner"
+
+#~ msgid "Display Logo"
+#~ msgstr "Visa logga"
+
+#~ msgid "Logo and Tagline"
+#~ msgstr "Logga och slogan"
+
+#~ msgid ""
+#~ "If these are left empty, the chosen logo for the site will be displayed. "
+#~ "If there is no chosen logo the site name will be displayed instead."
+#~ msgstr ""
+#~ "Om dessa fält lämnas tomma så visas vald logga. Om det inte finns någon "
+#~ "vald logga i temat visas istället sidans namn."
+
+#~ msgid "What to Display"
+#~ msgstr "Vad som ska visas"
+
+#~ msgid "Display Search Form"
+#~ msgstr "Visa sökformulär"
+
+#~ msgid "Placeholder"
+#~ msgstr "Valfri text"
+
+#~ msgid "Hide on Mobile"
+#~ msgstr "Dölj på mobil"
+
+#~ msgid "Animate"
+#~ msgstr "Animera"
+
+#~ msgid "Listen to Keystroke"
+#~ msgstr "Lyssna efter tangenttryck"
+
+#~ msgid "Display News/Posts"
+#~ msgstr "Visa nyheter/inlägg"
+
+#~ msgid "News"
+#~ msgstr "Nyheter"
+
+#~ msgid "Edit Item"
+#~ msgstr "Redigera objekt"
+
+#~ msgid "Default"
+#~ msgstr "Standard"
+
+#~ msgid "Post It"
+#~ msgstr "Post-It"
+
+#~ msgid "Simple"
+#~ msgstr "Enkel"
+
+#~ msgid "Compact"
+#~ msgstr "Kompakt"
+
+#~ msgid "Design"
+#~ msgstr "Utseende"
+
+#~ msgid "Amount"
+#~ msgstr "Antal"
+
+#~ msgid "h"
+#~ msgstr "tim"
+
+#~ msgid "Button to Hide"
+#~ msgstr "Knapp för att dölja"
+
+#~ msgid "Display Arrows"
+#~ msgstr "Visa pilar"
+
+#~ msgid "Autoscroll"
+#~ msgstr "Automatisk skroll"
+
+#~ msgid "Display Title"
+#~ msgstr "Visa rubrik"
+
+#~ msgid "Expand Content on Current Page"
+#~ msgstr "Utöka innehåll på nuvarande sida"
+
+#~ msgid "Display Info Module"
+#~ msgstr "Visa infomodul"
+
+#~ msgid "Info Module"
+#~ msgstr "Infomodul"
+
+#~ msgid "Button Text"
+#~ msgstr "Knapptext"
+
+#~ msgid "Page"
+#~ msgstr "Sida"
+
+#~ msgid "Link"
+#~ msgstr "Länk"
+
+#~ msgid "days"
+#~ msgstr "dagar"
+
+#~ msgid "times"
+#~ msgstr "gånger"
+
+#~ msgid "Display Related Posts"
+#~ msgstr "Visa relaterade inlägg"
+
+#~ msgid "Related Posts"
+#~ msgstr "Relaterade inlägg"
+
+#~ msgid "Promote Pages"
+#~ msgstr "Promota sidor"
+
+#~ msgid "Promotion"
+#~ msgstr "Promota"
+
+#~ msgid "Pages"
+#~ msgstr "Sidor"
+
+#~ msgid "Display Titles"
+#~ msgstr "Visa rubriker"
+
+#~ msgid "Display Table of Contents"
+#~ msgstr "Visa innehållsförteckning"
+
+#~ msgid "Table of Contents"
+#~ msgstr "Innehållsförteckning"
+
+#~ msgid "Advanced"
+#~ msgstr "Avancerat"
+
+#~ msgid "Main"
+#~ msgstr "Huvudmeny"
+
+#~ msgid "Main and Secondary Menu"
+#~ msgstr "Huvud- och sekundär meny"
+
+#~ msgid "Slide in From Right"
+#~ msgstr "Glid in från höger"
+
+#~ msgid "Not Found"
+#~ msgstr "Hittades inte"
+
+#~ msgid ""
+#~ "Apologies, but the page you requested could not be found. Perhaps "
+#~ "searching will help"
+#~ msgstr ""
+#~ "Vi ber om ursäkt, men sidan som du letade efter gick inte att hitta. "
+#~ "Kanske en sökning kan hjälpa"

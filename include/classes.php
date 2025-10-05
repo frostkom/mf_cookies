@@ -3,9 +3,86 @@
 class mf_cookies
 {
 	var $footer_output;
-	var $arr_sensitive_data_types = [];
+	var $arr_sensitive_data_types;
 
 	function __construct(){}
+
+	function get_post_password_amount()
+	{
+		global $wpdb;
+
+		$arr_include = get_post_types(array('public' => true, 'exclude_from_search' => false), 'names');
+
+		$wpdb->get_results($wpdb->prepare("SELECT ID FROM ".$wpdb->posts." WHERE post_status = %s AND post_type IN('".implode("','", $arr_include)."') AND post_password != ''", 'public'));
+
+		return $wpdb->num_rows;
+	}
+
+	function get_cookie_types()
+	{
+		global $wpdb;
+
+		if(!isset($this->arr_sensitive_data_types) || count($this->arr_sensitive_data_types) == 0)
+		{
+			$arr_sensitive_data_types = array(
+				'login' => [],
+				'public' => [],
+			);
+
+			$arr_sensitive_data_types['login']['wordpress_sec_'] = array('label' => __("Account details", 'lang_cookies'), 'used' => false, 'lifetime' => "2 day");
+			$arr_sensitive_data_types['login']['wordpress_logged_in_'] = array('label' => __("Indicates whether you are logged in", 'lang_cookies'), 'used' => false, 'lifetime' => "2 day");
+
+			$arr_sensitive_data_types['login']['wordpress_test_cookie'] = array('label' => __("Test if it is possible to set cookies", 'lang_cookies'), 'used' => false, 'lifetime' => "2 day", 'personal_data' => false);
+			$arr_sensitive_data_types['login']['wordpress_'] = array('label' => __("Authentication details", 'lang_cookies'), 'used' => false, 'lifetime' => "2 day");
+
+			$arr_sensitive_data_types['login']['wp-settings-time-'] = array('label' => __("Time when user settings was last saved", 'lang_cookies'), 'used' => false, 'lifetime' => "", 'personal_data' => false);
+			$arr_sensitive_data_types['login']['wp-settings-'] = array('label' => __("Customization for admin interface", 'lang_cookies'), 'used' => false, 'lifetime' => "2 day", 'personal_data' => false);
+
+			if($this->get_post_password_amount() > 0)
+			{
+				$arr_sensitive_data_types['public']['wp-postpass_'] = array('label' => __("Maintain session if a post is password protected", 'lang_cookies'), 'used' => false, 'lifetime' => "2 day");
+			}
+
+			if(get_option('default_comment_status') == 'open')
+			{
+				$arr_sensitive_data_types['public']['comment_author_'] = array('label' => __("Remember comment author details", 'lang_cookies'), 'used' => false, 'lifetime' => "1 year");
+			}
+
+			if(get_option('setting_cookie_info') > 0)
+			{
+				$arr_sensitive_data_types['public']['cookie_accepted'] = array('label' => __("Remember if visitor accepts sensitive data on the site", 'lang_cookies'), 'used' => false, 'lifetime' => "1 year", 'personal_data' => false);
+			}
+
+			if((int)apply_filters('get_widget_search', 'theme-news-widget') > 0)
+			{
+				$wpdb->get_results($wpdb->prepare("SELECT option_id FROM ".$wpdb->options." WHERE option_name = %s AND option_value LIKE %s", 'widget_theme-news-widget', "\"news_hide_button\";s:3:\"yes\""));
+
+				if($wpdb->num_rows > 0)
+				{
+					$arr_sensitive_data_types['public']['hide_news_'] = array('label' => __("Remember if a visitor has hidden the header news post", 'lang_cookies'), 'used' => false, 'lifetime' => "1 year", 'personal_data' => false);
+				}
+			}
+
+			if((int)apply_filters('get_widget_search', 'theme-info-widget') > 0)
+			{
+				$wpdb->get_results($wpdb->prepare("SELECT option_id FROM ".$wpdb->options." WHERE option_name = %s AND option_value NOT LIKE %s", 'widget_theme-info-widget', "\"info_time_limit\";s:3:\"0\""));
+
+				if($wpdb->num_rows > 0)
+				{
+					$arr_sensitive_data_types['public']['cookie_theme_core_info_time_limit'] = array('label' => __("Remember if the visitor has seen the info", 'lang_cookies')." (".__("Time Limit", 'lang_cookies').")", 'used' => false, 'lifetime' => "1 year", 'personal_data' => false);
+				}
+
+				$wpdb->get_results($wpdb->prepare("SELECT option_id FROM ".$wpdb->options." WHERE option_name = %s AND option_value NOT LIKE %s", 'widget_theme-info-widget', "\"info_visit_limit\";s:3:\"0\""));
+
+				if($wpdb->num_rows > 0)
+				{
+					$arr_sensitive_data_types['public']['cookie_theme_core_info_visit_limit'] = array('label' => __("Remember if the visitor has seen the info", 'lang_cookies')." (".__("Visit Limit", 'lang_cookies').")", 'used' => false, 'lifetime' => "1 year", 'personal_data' => false);
+				}
+			}
+
+			$this->arr_sensitive_data_types = apply_filters('filter_cookie_types', $arr_sensitive_data_types);
+		}
+	}
 
 	function settings_cookies()
 	{
@@ -13,16 +90,39 @@ class mf_cookies
 
 		add_settings_section($options_area, "", array($this, $options_area."_callback"), BASE_OPTIONS_PAGE);
 
+		$this->get_cookie_types();
+
 		$arr_settings = [];
 		$arr_settings['setting_cookie_exists'] = __("Sensitive Data on This Site", 'lang_cookies');
-		$arr_settings['setting_cookie_info'] = __("Information Page", 'lang_cookies');
 
-		if(get_option('setting_cookie_info') > 0)
+		if(!is_array($this->arr_sensitive_data_types['public']) || count($this->arr_sensitive_data_types['public']) == 0)
 		{
-			$arr_settings['setting_cookie_deactivate_until_allowed'] = __("Deactivate Until Allowed", 'lang_cookies');
+			$arr_settings['setting_cookie_fingerprint'] = __("Display Fingerprint", 'lang_cookies');
 		}
 
-		$arr_settings['setting_cookie_cookiebot'] = __("Cookiebot", 'lang_cookies');
+		else
+		{
+			delete_option('setting_cookie_fingerprint');
+		}
+
+		if(get_option('setting_cookie_fingerprint') != 'yes')
+		{
+			$arr_settings['setting_cookie_info'] = __("Information Page", 'lang_cookies');
+
+			if(get_option('setting_cookie_info') > 0)
+			{
+				$arr_settings['setting_cookie_deactivate_until_allowed'] = __("Deactivate Until Allowed", 'lang_cookies');
+			}
+
+			$arr_settings['setting_cookie_cookiebot'] = __("Cookiebot", 'lang_cookies');
+		}
+
+		else
+		{
+			delete_option('setting_cookie_info');
+			delete_option('setting_cookie_deactivate_until_allowed');
+			delete_option('setting_cookie_cookiebot');
+		}
 
 		show_settings_fields(array('area' => $options_area, 'object' => $this, 'settings' => $arr_settings));
 	}
@@ -34,91 +134,12 @@ class mf_cookies
 		echo settings_header($setting_key, __("Cookies", 'lang_cookies'));
 	}
 
-		function get_post_password_amount()
-		{
-			global $wpdb;
-
-			$arr_include = get_post_types(array('public' => true, 'exclude_from_search' => false), 'names');
-
-			$wpdb->get_results($wpdb->prepare("SELECT ID FROM ".$wpdb->posts." WHERE post_status = %s AND post_type IN('".implode("','", $arr_include)."') AND post_password != ''", 'public'));
-
-			return $wpdb->num_rows;
-		}
-
-		function get_cookie_types()
-		{
-			global $wpdb;
-
-			if(!isset($this->arr_sensitive_data_types))
-			{
-				$arr_sensitive_data_types = array(
-					'login' => [],
-					'public' => [],
-				);
-
-				$arr_sensitive_data_types['login']['wordpress_sec_'] = array('label' => __("Account details", 'lang_cookies'), 'used' => false, 'lifetime' => "2 day");
-				$arr_sensitive_data_types['login']['wordpress_logged_in_'] = array('label' => __("Indicates whether you are logged in", 'lang_cookies'), 'used' => false, 'lifetime' => "2 day");
-
-				$arr_sensitive_data_types['login']['wordpress_test_cookie'] = array('label' => __("Test if it is possible to set cookies", 'lang_cookies'), 'used' => false, 'lifetime' => "2 day", 'personal_data' => false);
-				$arr_sensitive_data_types['login']['wordpress_'] = array('label' => __("Authentication details", 'lang_cookies'), 'used' => false, 'lifetime' => "2 day");
-
-				$arr_sensitive_data_types['login']['wp-settings-time-'] = array('label' => __("Time when user settings was last saved", 'lang_cookies'), 'used' => false, 'lifetime' => "", 'personal_data' => false);
-				$arr_sensitive_data_types['login']['wp-settings-'] = array('label' => __("Customization for admin interface", 'lang_cookies'), 'used' => false, 'lifetime' => "2 day", 'personal_data' => false);
-
-				if($this->get_post_password_amount() > 0)
-				{
-					$arr_sensitive_data_types['public']['wp-postpass_'] = array('label' => __("Maintain session if a post is password protected", 'lang_cookies'), 'used' => false, 'lifetime' => "2 day");
-				}
-
-				if(get_option('default_comment_status') == 'open')
-				{
-					$arr_sensitive_data_types['public']['comment_author_'] = array('label' => __("Remember comment author details", 'lang_cookies'), 'used' => false, 'lifetime' => "1 year");
-				}
-
-				if(get_option('setting_cookie_info') > 0)
-				{
-					$arr_sensitive_data_types['public']['cookie_accepted'] = array('label' => __("Remember if visitor accepts sensitive data on the site", 'lang_cookies'), 'used' => false, 'lifetime' => "1 year", 'personal_data' => false);
-				}
-
-				if((int)apply_filters('get_widget_search', 'theme-news-widget') > 0)
-				{
-					$wpdb->get_results($wpdb->prepare("SELECT option_id FROM ".$wpdb->options." WHERE option_name = %s AND option_value LIKE %s", 'widget_theme-news-widget', "\"news_hide_button\";s:3:\"yes\""));
-
-					if($wpdb->num_rows > 0)
-					{
-						$arr_sensitive_data_types['public']['hide_news_'] = array('label' => __("Remember if a visitor has hidden the header news post", 'lang_cookies'), 'used' => false, 'lifetime' => "1 year", 'personal_data' => false);
-					}
-				}
-
-				if((int)apply_filters('get_widget_search', 'theme-info-widget') > 0)
-				{
-					$wpdb->get_results($wpdb->prepare("SELECT option_id FROM ".$wpdb->options." WHERE option_name = %s AND option_value NOT LIKE %s", 'widget_theme-info-widget', "\"info_time_limit\";s:3:\"0\""));
-
-					if($wpdb->num_rows > 0)
-					{
-						$arr_sensitive_data_types['public']['cookie_theme_core_info_time_limit'] = array('label' => __("Remember if the visitor has seen the info", 'lang_cookies')." (".__("Time Limit", 'lang_cookies').")", 'used' => false, 'lifetime' => "1 year", 'personal_data' => false);
-					}
-
-					$wpdb->get_results($wpdb->prepare("SELECT option_id FROM ".$wpdb->options." WHERE option_name = %s AND option_value NOT LIKE %s", 'widget_theme-info-widget', "\"info_visit_limit\";s:3:\"0\""));
-
-					if($wpdb->num_rows > 0)
-					{
-						$arr_sensitive_data_types['public']['cookie_theme_core_info_visit_limit'] = array('label' => __("Remember if the visitor has seen the info", 'lang_cookies')." (".__("Visit Limit", 'lang_cookies').")", 'used' => false, 'lifetime' => "1 year", 'personal_data' => false);
-					}
-				}
-
-				$this->arr_sensitive_data_types = apply_filters('filter_cookie_types', $arr_sensitive_data_types);
-			}
-		}
-
-		function get_cookie_list($data = [])
-		{
+		function setting_cookie_exists_callback()
+		{		
 			$out = "";
 
 			if(isset($_COOKIE) && count($_COOKIE) > 0)
 			{
-				$this->get_cookie_types();
-
 				$out .= "<ul>";
 
 					foreach($_COOKIE as $cookie_key => $cookie_value)
@@ -239,15 +260,15 @@ class mf_cookies
 				$out .= "<p>".__("There is no sensitive data saved on this site", 'lang_cookies')."</p>";
 			}
 
-			if($data['return'] == 'html')
-			{
-				return $out;
-			}
+			echo $out;
 		}
 
-		function setting_cookie_exists_callback()
+		function setting_cookie_fingerprint_callback()
 		{
-			echo $this->get_cookie_list(array('return' => 'html'));
+			$setting_key = get_setting_key(__FUNCTION__);
+			$option = get_option($setting_key, 'no');
+
+			echo show_select(array('data' => get_yes_no_for_select(), 'name' => $setting_key, 'value' => $option, 'description' => __("This will display an icon and inform the visitor that this website is NOT collecting any sensitive data about the visitor.", 'lang_cookies')));
 		}
 
 		function setting_cookie_info_callback()
@@ -260,22 +281,22 @@ class mf_cookies
 
 			$description = "";
 
-			// Not needed right now but just in case we switch this function and setting_cookie_exists_callback() around...
-			$this->get_cookie_types();
-
-			if(count($this->arr_sensitive_data_types['public']) > 0)
+			if(is_array($this->arr_sensitive_data_types))
 			{
-				if(!($option > 0) && get_option('setting_cookie_cookiebot') == '')
+				if(is_array($this->arr_sensitive_data_types['public']) && count($this->arr_sensitive_data_types['public']) > 0)
 				{
-					$description .= "<i class='fa fa-exclamation-triangle yellow display_warning'></i> ";
+					if(!($option > 0) && get_option('setting_cookie_cookiebot') == '')
+					{
+						$description .= "<i class='fa fa-exclamation-triangle yellow display_warning'></i> ";
+					}
+
+					$description .= __("There is sensitive information on the public site that is saved for visitors.", 'lang_cookies')." ";
 				}
 
-				$description .= __("There is sensitive information on the public site that is saved for visitors.", 'lang_cookies')." ";
-			}
-
-			else if(count($this->arr_sensitive_data_types['login']) > 0)
-			{
-				$description .= __("There is only sensitive information on this site that is saved when logging in so it is not necessary to add a page for this.", 'lang_cookies')." ";
+				else if(is_array($this->arr_sensitive_data_types['login']) && count($this->arr_sensitive_data_types['login']) > 0)
+				{
+					$description .= __("There is only sensitive information on this site that is saved when logging in so it is not necessary to add a page for this.", 'lang_cookies')." ";
+				}
 			}
 
 			$description .= __("The content from this page will be displayed on the site until the visitor clicks to accept the collection of sensitive data.", 'lang_cookies');
@@ -307,7 +328,7 @@ class mf_cookies
 		{
 			$plugin_include_url = plugin_dir_url(__FILE__);
 
-			mf_enqueue_script('script_cookies', $plugin_include_url."script_wp.js", array('plugin_url' => $plugin_include_url, 'ajax_url' => admin_url('admin-ajax.php')));
+			mf_enqueue_script('script_cookies_wp', $plugin_include_url."script_wp.js", array('plugin_url' => $plugin_include_url, 'ajax_url' => admin_url('admin-ajax.php')));
 		}
 
 		if(function_exists('wp_add_privacy_policy_content'))
@@ -343,64 +364,78 @@ class mf_cookies
 
 	function wp_head()
 	{
-		global $wpdb, $post, $obj_base;
+		global $wpdb, $obj_base; //, $post
 
 		$plugin_include_url = plugin_dir_url(__FILE__);
 
-		$setting_cookie_info = get_option('setting_cookie_info');
-		$setting_cookie_cookiebot = get_option('setting_cookie_cookiebot');
+		$setting_cookie_fingerprint = get_option('setting_cookie_fingerprint');
 
-		if($setting_cookie_info > 0)
+		if($setting_cookie_fingerprint == 'yes')
 		{
-			mf_enqueue_style('style_cookies', $plugin_include_url."style.css");
-			mf_enqueue_script('script_cookies', $plugin_include_url."script.js", array('plugin_url' => $plugin_include_url));
+			mf_enqueue_style('style_cookies_fingerprint', $plugin_include_url."style_fingerprint.css");
 
-			$button_classes = (wp_is_block_theme() ? "wp-block-button__link has-background wp-element-button" : "button color_button");
-
-			$result = $wpdb->get_results($wpdb->prepare("SELECT ID, post_title, post_excerpt, post_content FROM ".$wpdb->posts." WHERE ID = '%d' AND post_type = %s AND post_status = %s", $setting_cookie_info, 'page', 'publish'));
-
-			foreach($result as $r)
-			{
-				$post_id = $r->ID;
-				$post_title = $r->post_title;
-				$post_excerpt = apply_filters('the_content', $r->post_excerpt);
-				$post_content = apply_filters('the_content', $r->post_content);
-
-				$this->footer_output = "<div id='accept_cookies'>
-					<div>";
-
-						$buttons = "<a href='#accept_cookie' class='".$button_classes."'><i class='fa fa-check green'></i> ".__("Accept", 'lang_cookies')."</a>";
-
-						if($post_excerpt != '')
-						{
-							$this->footer_output .= $post_excerpt;
-
-							if($post_content != '' && $post_content != $post_excerpt)
-							{
-								$buttons .= " <a href='".get_permalink($post_id)."' class='".$button_classes."' rel='external'>".__("Read More", 'lang_cookies')."</a>";
-							}
-						}
-
-						else
-						{
-							$this->footer_output .= $post_content;
-						}
-
-						$this->footer_output .= "<div".get_form_button_classes().">".$buttons."</div>
-					</div>
-				</div>
-				<div id='accepted_cookies'>
-					<span class='fa-stack fa-2x' title='".__("You have accepted that we collect sensitive data. Do you wish to remove this acceptance?", 'lang_cookies')."'>
-						<i class='fas fa-cookie-bite fa-stack-1x'></i>
-						<i class='fas fa-ban fa-stack-2x red'></i>
-					</span>
-				</div>";
-			}
+			$this->footer_output = "<div id='cookies_fingerprint'>
+				<i class='fas fa-fingerprint' title='".__("We do not collect or store sensitive information about you as a visitor. If you choose to submit data through forms or log in to the site's admin section, we will only retain the minimal information required to display the content you are authorized to access.", 'lang_cookies')."'></i>
+			</div>";
 		}
 
-		if($setting_cookie_cookiebot != '')
+		else
 		{
-			$this->footer_output .= "<script data-blockingmode='auto' id='Cookiebot' src='https://consent.cookiebot.com/uc.js' data-cbid='".$setting_cookie_cookiebot."' type='text/javascript'></script>";
+			$setting_cookie_info = get_option('setting_cookie_info');
+			$setting_cookie_cookiebot = get_option('setting_cookie_cookiebot');
+
+			if($setting_cookie_info > 0)
+			{
+				mf_enqueue_style('style_cookies_info', $plugin_include_url."style_info.css");
+				mf_enqueue_script('script_cookies_info', $plugin_include_url."script_info.js", array('plugin_url' => $plugin_include_url));
+
+				$button_classes = (wp_is_block_theme() ? "wp-block-button__link has-background wp-element-button" : "button color_button");
+
+				$result = $wpdb->get_results($wpdb->prepare("SELECT ID, post_title, post_excerpt, post_content FROM ".$wpdb->posts." WHERE ID = '%d' AND post_type = %s AND post_status = %s", $setting_cookie_info, 'page', 'publish'));
+
+				foreach($result as $r)
+				{
+					$post_id = $r->ID;
+					$post_title = $r->post_title;
+					$post_excerpt = apply_filters('the_content', $r->post_excerpt);
+					$post_content = apply_filters('the_content', $r->post_content);
+
+					$this->footer_output = "<div id='accept_cookies'>
+						<div>";
+
+							$buttons = "<a href='#accept_cookie' class='".$button_classes."'><i class='fa fa-check green'></i> ".__("Accept", 'lang_cookies')."</a>";
+
+							if($post_excerpt != '')
+							{
+								$this->footer_output .= $post_excerpt;
+
+								if($post_content != '' && $post_content != $post_excerpt)
+								{
+									$buttons .= " <a href='".get_permalink($post_id)."' class='".$button_classes."' rel='external'>".__("Read More", 'lang_cookies')."</a>";
+								}
+							}
+
+							else
+							{
+								$this->footer_output .= $post_content;
+							}
+
+							$this->footer_output .= "<div".get_form_button_classes().">".$buttons."</div>
+						</div>
+					</div>
+					<div id='accepted_cookies'>
+						<span class='fa-stack fa-2x' title='".__("You have accepted that we collect sensitive data. Do you wish to remove this acceptance?", 'lang_cookies')."'>
+							<i class='fas fa-cookie-bite fa-stack-1x'></i>
+							<i class='fas fa-ban fa-stack-2x red'></i>
+						</span>
+					</div>";
+				}
+			}
+
+			if($setting_cookie_cookiebot != '')
+			{
+				$this->footer_output .= "<script data-blockingmode='auto' id='Cookiebot' src='https://consent.cookiebot.com/uc.js' data-cbid='".$setting_cookie_cookiebot."' type='text/javascript'></script>";
+			}
 		}
 	}
 

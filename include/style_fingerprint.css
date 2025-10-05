@@ -1,0 +1,28 @@
+@media all
+{
+	#cookies_fingerprint
+	{
+		background: #000;
+		border-radius: .5em;
+		bottom: .5em;
+		color: #fff;
+		opacity: .2;
+		padding: .4em .8em;
+		position: fixed;
+		left: .5em;
+		z-index: 1002;
+	}
+
+		#cookies_fingerprint:hover
+		{
+			opacity: .7;
+		}
+}
+
+@media print
+{
+	#cookies_fingerprint
+	{
+		display: none;
+	}
+}
