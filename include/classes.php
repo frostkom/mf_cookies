@@ -375,7 +375,7 @@ class mf_cookies
 			mf_enqueue_style('style_cookies_fingerprint', $plugin_include_url."style_fingerprint.css");
 
 			$this->footer_output = "<div id='cookies_fingerprint'>
-				<i class='fas fa-fingerprint' title='".__("We do not collect or store sensitive information about you as a visitor. If you choose to submit data through forms or log in to the site's admin section, we will only retain the minimal information required to display the content you are authorized to access.", 'lang_cookies')."'></i>
+				<i class='fas fa-fingerprint'></i><span>".__("We do not collect or store sensitive information about you as a visitor. If you choose to submit data through forms or log in to the site's admin section, we will only retain the minimal information required to display the content you are authorized to access.", 'lang_cookies')."</span>
 			</div>";
 		}
 

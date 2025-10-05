@@ -4,12 +4,13 @@
 	{
 		background: #000;
 		border-radius: .5em;
-		bottom: .5em;
+		bottom: 0;
 		color: #fff;
+		margin: .5em;
 		opacity: .2;
-		padding: .4em .8em;
+		padding: .6em .8em;
 		position: fixed;
-		left: .5em;
+		left: 0;
 		z-index: 1002;
 	}
 
@@ -17,6 +18,23 @@
 		{
 			opacity: .7;
 		}
+		
+		#cookies_fingerprint i
+		{
+			float: left;
+			margin: .2em 0;
+		}
+
+		#cookies_fingerprint span
+		{
+			display: none;
+			margin-left: .5em;
+		}
+
+			#cookies_fingerprint:hover span
+			{
+				display: inline;
+			}
 }
 
 @media print
