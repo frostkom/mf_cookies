@@ -135,7 +135,7 @@ class mf_cookies
 	}
 
 		function setting_cookie_exists_callback()
-		{		
+		{
 			$out = "";
 
 			if(isset($_COOKIE) && count($_COOKIE) > 0)
@@ -411,7 +411,7 @@ class mf_cookies
 
 								if($post_content != '' && $post_content != $post_excerpt)
 								{
-									$buttons .= " <a href='".get_permalink($post_id)."' class='".$button_classes."' rel='external'>".__("Read More", 'lang_cookies')."</a>";
+									$buttons .= " <a href='".get_permalink($post_id)."' class='".$button_classes."'>".__("Read More", 'lang_cookies')."</a>";
 								}
 							}
 
