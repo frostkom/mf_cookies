@@ -84,6 +84,11 @@ class mf_cookies
 		}
 	}
 
+	function init()
+	{
+		load_plugin_textdomain('lang_cookies', false, str_replace("/include", "", dirname(plugin_basename(__FILE__)))."/lang/");
+	}
+
 	function settings_cookies()
 	{
 		$options_area_orig = $options_area = __FUNCTION__;
