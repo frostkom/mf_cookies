@@ -329,12 +329,12 @@ class mf_cookies
 	{
 		global $pagenow;
 
-		if($pagenow == 'options-general.php' && check_var('page') == 'settings_mf_base')
+		/*if($pagenow == 'options-general.php' && check_var('page') == 'settings_mf_base')
 		{
 			$plugin_include_url = plugin_dir_url(__FILE__);
 
 			mf_enqueue_script('script_cookies_wp', $plugin_include_url."script_wp.js", array('plugin_url' => $plugin_include_url, 'ajax_url' => admin_url('admin-ajax.php')));
-		}
+		}*/
 
 		if(function_exists('wp_add_privacy_policy_content'))
 		{
