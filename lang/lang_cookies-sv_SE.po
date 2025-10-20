@@ -165,7 +165,7 @@ msgstr "Tema"
 
 #: ../include/classes.php:378
 msgid "We do not collect or store sensitive information about you as a visitor. If you choose to submit data through forms or log in to the site's admin section, we will only collect the data that you entered."
-msgstr "Vi samlar inte in eller lagrar känslig information om dig som besökare. Om du väljer att skicka in data via formulär eller logga in på webbplatsens adminsektion så sparar vi endast den information som du fyllde i."
+msgstr "Vi samlar varken in eller lagrar känslig information om dig som besökare. Om du väljer att skicka in data via formulär eller logga in på webbplatsens adminsektion så sparar vi endast den information som du fyllde i."
 
 #: ../include/classes.php:406
 msgid "Accept"
