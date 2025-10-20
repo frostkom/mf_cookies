@@ -1,54 +1,51 @@
-@media all
+#accept_cookies
 {
-	#accept_cookies
+	background: #fff;
+	background: rgba(255, 255, 255, .8);
+	border-top: .1px solid #ccc;
+	bottom: 0;
+	display: none;
+	left: 0;
+	padding: 1.5em;
+	position: fixed;
+	right: 0;
+	z-index: 1002;
+}
+
+	#accept_cookies > div
 	{
-		background: #fff;
-		background: rgba(255, 255, 255, .8);
-		border-top: .1px solid #ccc;
-		bottom: 0;
-		display: none;
-		left: 0;
-		padding: 1.5em;
-		position: fixed;
-		right: 0;
-		z-index: 1002;
+		display: flex;
 	}
 
-		#accept_cookies > div
+		#accept_cookies p
 		{
-			display: flex;
+			flex: 1 0 auto;
+			margin: 0;
 		}
 
-			#accept_cookies p
+			#accept_cookies .form_button .button, #accept_cookies .wp-block-button .button
 			{
-				flex: 1 0 auto;
-				margin: 0;
+				margin-bottom: 0;
 			}
 
-				#accept_cookies .form_button .button, #accept_cookies .wp-block-button .button
-				{
-					margin-bottom: 0;
-				}
-
-	#accepted_cookies
-	{
-		background: #000;
-		border-radius: .5em;
-		bottom: .5em;
-		color: #fff;
-		display: none;
-		opacity: .2;
-		padding: .4em .8em;
-		position: fixed;
-		left: .5em;
-		z-index: 1002;
-	}
-
-		#accepted_cookies:hover
-		{
-			opacity: .7;
-		}
+#accepted_cookies
+{
+	background: #000;
+	border-radius: .5em;
+	bottom: .5em;
+	color: #fff;
+	display: none;
+	opacity: .2;
+	padding: .4em .8em;
+	position: fixed;
+	left: .5em;
+	z-index: 1002;
 }
+
+	#accepted_cookies:hover
+	{
+		opacity: .7;
+	}
 
 @media print
 {
