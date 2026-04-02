@@ -381,7 +381,7 @@ class mf_cookies
 
 			mf_enqueue_style('style_cookies_fingerprint', $plugin_include_url."style_fingerprint.css");
 
-			$this->footer_output = "<div id='cookies_fingerprint'>"
+			$this->footer_output .= "<div id='cookies_fingerprint'>"
 				//."<i class='fas fa-fingerprint'></i>"
 				//."<img src='".$plugin_include_url."images/fingerprint.svg' alt='".__("Icon of a fingerprint", 'lang_cookies')."'/>"
 				.'<svg fill="#999" viewBox="0 0 32 32">
@@ -414,7 +414,7 @@ class mf_cookies
 					$post_excerpt = apply_filters('the_content', $r->post_excerpt);
 					$post_content = apply_filters('the_content', $r->post_content);
 
-					$this->footer_output = "<div id='accept_cookies'>
+					$this->footer_output .= "<div id='accept_cookies'>
 						<div>";
 
 							$buttons = "<a href='#accept_cookie' class='".$button_classes."'><i class='fa fa-check green'></i> ".__("Accept", 'lang_cookies')."</a>";
