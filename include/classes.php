@@ -414,28 +414,26 @@ class mf_cookies
 					$post_excerpt = apply_filters('the_content', $r->post_excerpt);
 					$post_content = apply_filters('the_content', $r->post_content);
 
-					$this->footer_output .= "<div id='accept_cookies'>
-						<div>";
+					$this->footer_output .= "<div id='accept_cookies'>";
 
-							$buttons = "<a href='#accept_cookie' class='".$button_classes."'><i class='fa fa-check green'></i> ".__("Accept", 'lang_cookies')."</a>";
+						$buttons = "<a href='#accept_cookie' class='accept_button ".$button_classes."'><i class='fa fa-check green'></i> ".__("Accept", 'lang_cookies')."</a>";
 
-							if($post_excerpt != '')
+						if($post_excerpt != '')
+						{
+							$this->footer_output .= $post_excerpt;
+
+							if($post_content != '' && $post_content != $post_excerpt)
 							{
-								$this->footer_output .= $post_excerpt;
-
-								if($post_content != '' && $post_content != $post_excerpt)
-								{
-									$buttons .= " <a href='".get_permalink($post_id)."' class='".$button_classes."'>".__("Read More", 'lang_cookies')."</a>";
-								}
+								$buttons .= " <a href='".get_permalink($post_id)."' class='".$button_classes."'>".__("Read More", 'lang_cookies')."</a>";
 							}
+						}
 
-							else
-							{
-								$this->footer_output .= $post_content;
-							}
+						else
+						{
+							$this->footer_output .= $post_content;
+						}
 
-							$this->footer_output .= "<div".get_form_button_classes().">".$buttons."</div>
-						</div>
+						$this->footer_output .= "<div".get_form_button_classes().">".$buttons."</div>
 					</div>
 					<div id='accepted_cookies'>
 						<span class='fa-stack fa-2x' title='".__("You have accepted that we collect sensitive data. Do you wish to remove this acceptance?", 'lang_cookies')."'>

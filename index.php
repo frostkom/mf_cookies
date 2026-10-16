@@ -2,8 +2,8 @@
 /*
 Plugin Name: MF Cookies
 Plugin URI: https://github.com/frostkom/mf_cookies
-Description:
-Version: 1.0.22
+Description: Add icon to display there is nothing tracking users, or text that there are trackers
+Version: 1.1.0
 Licence: GPLv2 or later
 Author: Martin Fors
 Author URI: https://martinfors.se
